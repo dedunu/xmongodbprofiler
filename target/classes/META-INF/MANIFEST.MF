@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: dedunu
+Build-Jdk: 1.6.0_45
+Build-Timestamp: 
+Created-By: Maven Integration for Eclipse
+Specification-Vendor: ${parsedVersion.majorVersion}.${parsedVersion.mi
+ norVersion}.${parsedVersion.incrementalVersion} ${parsedVersion.quali
+ fier} Build ${revisionNumber}
+Specification-Version: ${parsedVersion.majorVersion}.${parsedVersion.m
+ inorVersion}.${parsedVersion.incrementalVersion}.${revisionNumber}
+
