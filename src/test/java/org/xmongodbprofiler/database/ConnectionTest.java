@@ -7,35 +7,29 @@ import junit.framework.TestCase;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 
-import org.xmongodbprofiler.database.Connection;
-
 public class ConnectionTest extends TestCase {
 
 	public void testConnectionWithoutAuth() throws UnknownHostException {
 		Connection con = new Connection();
-		con.addServer("localhost", 27017);
 		con.setDatabase("test1");
-		con.setUserName("");
-		con.setPassword("");
+		con.setPassword("1234");
+		con.setUserName("testUser");
+		con.addServer("localhost", 27017);
 		DB database = con.connect();
 		database.getCollection("testCon").insert(
 				new BasicDBObject("testAuth", "done"));
-
-			assertTrue(false);
+		assertTrue(true);
 	}
 
 	public void testConnectionWithAuth() throws UnknownHostException {
 		Connection con = new Connection();
-		con.addServer("localhost", 27017);
 		con.setDatabase("test1");
-		con.setUserName("testUser");
-		con.setPassword("1234");
-		DB database = con.connect();
-
+		con.setPassword("");
+		con.setUserName("");
+		con.addServer("localhost", 27017);
+		DB database = con.connectWithNoAuth();
 		database.getCollection("testCon").insert(
 				new BasicDBObject("testAuth", "done"));
-		
 		assertTrue(true);
-
 	}
 }

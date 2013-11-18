@@ -1,8 +1,8 @@
 package org.xmongodbprofiler.database;
 
+import java.util.List;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
@@ -12,10 +12,10 @@ import com.mongodb.ServerAddress;
 public class Connection {
 
 	private MongoClient client = null;
-	private List<ServerAddress> seeds = new ArrayList<ServerAddress>();
 	private String userName = null;
 	private String password = null;
 	private String database = null;
+	private List<ServerAddress> serverList = new ArrayList<ServerAddress>();
 
 	public Connection() {
 
@@ -25,42 +25,52 @@ public class Connection {
 		this.client = client;
 	}
 
-	public void addServer(String serverName, int port)
-			throws UnknownHostException {
-		seeds.add(new ServerAddress(serverName, port));
-	}
-	
-	public void addServer(String serverName)
-			throws UnknownHostException {
-		seeds.add(new ServerAddress(serverName, 27017));
+	public String getUserName() {
+		return userName;
 	}
 
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getDatabase() {
+		return database;
 	}
 
 	public void setDatabase(String database) {
 		this.database = database;
 	}
 
-	public DB connect() {
-		List<MongoCredential> credentialsList = null;
-		credentialsList.add(MongoCredential.createMongoCRCredential(userName,
-				this.database, password.toCharArray()));
-		client = new MongoClient(seeds, credentialsList);
-		return client.getDB(this.database);
+	public List<ServerAddress> getServerList() {
+		return serverList;
 	}
 
-	public DB connect(String database) {
-		List<MongoCredential> credentialsList = null;
-		credentialsList.add(MongoCredential.createMongoCRCredential(userName,
+	public void addServer(String serverName, int port)
+			throws UnknownHostException {
+		serverList.add(new ServerAddress(serverName, port));
+	}
+
+	public void addServer(String serverName) throws UnknownHostException {
+		serverList.add(new ServerAddress(serverName));
+	}
+
+	public DB connect() {
+		List<MongoCredential> credentials = new ArrayList<MongoCredential>();
+		credentials.add(MongoCredential.createMongoCRCredential(userName,
 				database, password.toCharArray()));
-		client = new MongoClient(seeds, credentialsList);
+		MongoClient client = new MongoClient(serverList, credentials);
 		return client.getDB(database);
 	}
-
+	public DB connectWithNoAuth() {
+		MongoClient client = new MongoClient(serverList);
+		return client.getDB(database);
+	}
 }
