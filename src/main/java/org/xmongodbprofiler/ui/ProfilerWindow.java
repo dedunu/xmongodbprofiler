@@ -1,12 +1,15 @@
 package org.xmongodbprofiler.ui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
-public class ProfilerWindow extends JFrame {
+public class ProfilerWindow extends JFrame implements ActionListener  {
 	private JLabel lblServer = new JLabel("Server Name");
 	private JLabel lblPort = new JLabel("Port");
 	private JLabel lblDatabase = new JLabel("Database");
@@ -62,10 +65,23 @@ public class ProfilerWindow extends JFrame {
 		btnStart.setBounds(180, 155, 80, 30);
 		btnStop.setBounds(300, 155, 80, 30);
 		
+		btnStart.addActionListener(this);
+		btnStop.addActionListener(this);
+		
 		this.setTitle("MongoDB Profiler");
 		this.setSize(500, 500);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnStart){
+			
+		}
+		if (e.getSource() == btnStop){
+			
+		}
 	}
 }
