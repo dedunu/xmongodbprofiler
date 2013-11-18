@@ -1,6 +1,7 @@
 package org.xmongodbprofiler.database;
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mongodb.DB;
@@ -11,7 +12,7 @@ import com.mongodb.ServerAddress;
 public class Connection {
 
 	private MongoClient client = null;
-	private List<ServerAddress> seeds;
+	private List<ServerAddress> seeds = new ArrayList<ServerAddress>();
 	private String userName = null;
 	private String password = null;
 	private String database = null;
@@ -27,6 +28,11 @@ public class Connection {
 	public void addServer(String serverName, int port)
 			throws UnknownHostException {
 		seeds.add(new ServerAddress(serverName, port));
+	}
+	
+	public void addServer(String serverName)
+			throws UnknownHostException {
+		seeds.add(new ServerAddress(serverName, 27017));
 	}
 
 	public void setUserName(String userName) {
@@ -44,7 +50,7 @@ public class Connection {
 	public DB connect() {
 		List<MongoCredential> credentialsList = null;
 		credentialsList.add(MongoCredential.createMongoCRCredential(userName,
-				database, password.toCharArray()));
+				this.database, password.toCharArray()));
 		client = new MongoClient(seeds, credentialsList);
 		return client.getDB(this.database);
 	}

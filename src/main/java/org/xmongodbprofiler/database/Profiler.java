@@ -8,18 +8,17 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
 
 public class Profiler {
 	public static boolean startProfiler(DB database) {
 		try {
 			if (database.getCollection("system.profile").getCount() > 0) {
 				Date date = new Date();
-				String timestamp = (new Timestamp(date.getTime())).toString();
-				BasicDBObject commandObject = new BasicDBObject(
-						"renameCollection", "system.profile");
-				commandObject.append("to", "profile_purge_" + timestamp);
-				database.command(commandObject);
+				String timestamp = (new Timestamp(date.getTime())).toString()
+						.replace(" ", "").replace("-", "").replace(":", "")
+						.replace(".", "");
+				database.getCollection("system.profile").rename(
+						"sysprofile" + timestamp);
 			}
 
 			database.command(new BasicDBObject("profile", 2));
