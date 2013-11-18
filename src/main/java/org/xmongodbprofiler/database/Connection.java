@@ -11,7 +11,6 @@ import com.mongodb.ServerAddress;
 
 public class Connection {
 
-	private MongoClient client = null;
 	private String userName = null;
 	private String password = null;
 	private String database = null;
@@ -19,10 +18,6 @@ public class Connection {
 
 	public Connection() {
 
-	}
-
-	public Connection(MongoClient client) {
-		this.client = client;
 	}
 
 	public String getUserName() {

@@ -1,6 +1,7 @@
 package org.xmongodbprofiler.database;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Profiler {
 		try {
 			database.command(new BasicDBObject("profile", 0));
 
-			List<BasicDBObject> list = null;
+			List<BasicDBObject> list = new ArrayList<BasicDBObject>();
 
 			DBCollection collection = database.getCollection("system.profile");
 			DBCursor cursor = collection.find();
