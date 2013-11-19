@@ -15,6 +15,7 @@ public class MainWindow extends JFrame implements ActionListener{
 	JMenuBar menuBar = new JMenuBar();
 	JMenu menu = new JMenu("File");
 	JMenuItem menuProfiler = new JMenuItem("Profiler");
+	JMenuItem menuViewer = new JMenuItem("Viewer");
 	JMenuItem menuExit = new JMenuItem("Exit");
 	ProfilerWindow profiler = new ProfilerWindow();
 
@@ -27,10 +28,11 @@ public class MainWindow extends JFrame implements ActionListener{
 		this.setTitle("XMongoDBProfiler");
 		menuBar.add(menu);
 		menu.add(menuProfiler);
+		menu.add(menuViewer);
 		menu.add(menuExit);
 	
 		this.setJMenuBar(menuBar);
-		
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		menuProfiler.addActionListener(this);
 		menuExit.addActionListener(this);
 	}

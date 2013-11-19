@@ -1,9 +1,13 @@
 package org.xmongodbprofiler;
 
+import org.xmongodbprofiler.ui.MainWindow;
+
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Test");
+		MainWindow window = new MainWindow();
+		System.out.println("Program Started");
+		window.setVisible(true);
 	}
 
 }
