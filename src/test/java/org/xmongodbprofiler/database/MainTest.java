@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.List;
 
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 
@@ -31,8 +34,18 @@ public class MainTest {
 		List<BasicDBObject> obj2 = DataHandler.loadData("/home/dedunu/test.data");
 		
 		System.out.println(obj2.toString());*/
-
+		/*JFrame jf = new JFrame();
+		
+		JDesktopPane jdp = new JDesktopPane();
+		
 		ProfilerWindow pw = new ProfilerWindow();
+		jdp.add(pw);
+		jf.setContentPane(jdp);
+		jf.setVisible(true);
+		jf.setSize(700,700);
+		pw.setVisible(true);*/
+		
+		MainWindow win = new MainWindow();
 		
 		
 	}

@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -22,7 +23,7 @@ import org.xmongodbprofiler.database.Profiler;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 
-public class ProfilerWindow extends JFrame implements ActionListener {
+public class ProfilerWindow extends JInternalFrame implements ActionListener {
 
 	private Connection connection = new Connection();
 	private DB database = null;
@@ -63,7 +64,7 @@ public class ProfilerWindow extends JFrame implements ActionListener {
 		this.add(txtPath);
 		this.add(btnStart);
 		this.add(btnStop);
-
+		
 		lblServer.setBounds(10, 15, 100, 10);
 		lblPort.setBounds(365, 15, 80, 10);
 		lblDatabase.setBounds(10, 45, 80, 10);
@@ -92,11 +93,12 @@ public class ProfilerWindow extends JFrame implements ActionListener {
 
 		btnStart.addActionListener(this);
 		btnStop.addActionListener(this);
-
+		
+		this.setClosable(true);
 		this.setTitle("MongoDB Profiler");
 		this.setSize(500, 230);
-		this.setVisible(true);
-		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		//this.setVisible(true);
+		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 	}
 
