@@ -1,8 +1,5 @@
 Manifest-Version: 1.0
 Built-By: dedunu
 Build-Jdk: 1.7.0_45
-Build-Timestamp: 
 Created-By: Maven Integration for Eclipse
-Specification-Vendor: 0.0.1 SNAPSHOT Build ${revisionNumber}
-Specification-Version: 0.0.1.${revisionNumber}
 

@@ -9,7 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -25,6 +24,8 @@ import com.mongodb.DB;
 
 public class ProfilerWindow extends JInternalFrame implements ActionListener {
 
+	private static final long serialVersionUID = 5481142824468689746L;
+	
 	private Connection connection = new Connection();
 	private DB database = null;
 	private JLabel lblServer = new JLabel("Server Name");

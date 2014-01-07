@@ -9,8 +9,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-public class MainWindow extends JFrame implements ActionListener{
-	
+public class MainWindow extends JFrame implements ActionListener {
+
+	private static final long serialVersionUID = -1095356087304062346L;
+
 	JDesktopPane desktop = new JDesktopPane();
 	JMenuBar menuBar = new JMenuBar();
 	JMenu menu = new JMenu("File");
@@ -19,18 +21,18 @@ public class MainWindow extends JFrame implements ActionListener{
 	JMenuItem menuExit = new JMenuItem("Exit");
 	ProfilerWindow profiler = new ProfilerWindow();
 
-	public MainWindow(){
+	public MainWindow() {
 		desktop.add(profiler);
 		this.setContentPane(desktop);
 		this.setVisible(true);
-		this.setSize(700,700);
-		
+		this.setSize(700, 700);
+
 		this.setTitle("XMongoDBProfiler");
 		menuBar.add(menu);
 		menu.add(menuProfiler);
 		menu.add(menuViewer);
 		menu.add(menuExit);
-	
+
 		this.setJMenuBar(menuBar);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		menuProfiler.addActionListener(this);
@@ -39,10 +41,10 @@ public class MainWindow extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == menuExit){
+		if (e.getSource() == menuExit) {
 			System.exit(0);
 		}
-		if (e.getSource() == menuProfiler){
+		if (e.getSource() == menuProfiler) {
 			ProfilerWindow profiler = new ProfilerWindow();
 			this.add(profiler);
 			profiler.setVisible(true);
