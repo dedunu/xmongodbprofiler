@@ -85,7 +85,7 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 				.replace(" ", "").replace("-", "").replace(":", "")
 				.replace(".", "");
 		txtPath.setText(System.getProperty("user.home") + "/mongodb_profiler_"
-				+ timestamp + ".xmp");
+				+ timestamp + ".xls");
 
 		btnStop.setEnabled(false);
 
@@ -178,7 +178,7 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 						.replace(" ", "").replace("-", "").replace(":", "")
 						.replace(".", "");
 				txtPath.setText(System.getProperty("user.home")
-						+ "/mongodb_profiler_" + timestamp + ".xmp");
+						+ "/mongodb_profiler_" + timestamp + ".xls");
 
 				btnStart.setEnabled(true);
 				btnStop.setEnabled(false);
