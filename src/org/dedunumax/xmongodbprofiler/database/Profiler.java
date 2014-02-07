@@ -1,4 +1,4 @@
-package org.xmongodbprofiler.database;
+package org.dedunumax.xmongodbprofiler.database;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package org.xmongodbprofiler.ui;
+package org.dedunumax.xmongodbprofiler.ui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
-import org.xmongodbprofiler.DataHandler;
-import org.xmongodbprofiler.database.Connection;
-import org.xmongodbprofiler.database.Profiler;
+import org.dedunumax.xmongodbprofiler.DataHandler;
+import org.dedunumax.xmongodbprofiler.database.Connection;
+import org.dedunumax.xmongodbprofiler.database.Profiler;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;

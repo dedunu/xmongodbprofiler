@@ -1,6 +1,6 @@
-package org.xmongodbprofiler;
+package org.dedunumax.xmongodbprofiler;
 
-import org.xmongodbprofiler.ui.MainWindow;
+import org.dedunumax.xmongodbprofiler.ui.MainWindow;
 
 public class Main {
 

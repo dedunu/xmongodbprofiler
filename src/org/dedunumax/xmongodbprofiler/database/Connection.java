@@ -1,4 +1,4 @@
-package org.xmongodbprofiler.database;
+package org.dedunumax.xmongodbprofiler.database;
 
 import java.util.List;
 import java.net.UnknownHostException;

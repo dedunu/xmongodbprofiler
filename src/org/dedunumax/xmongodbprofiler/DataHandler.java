@@ -1,4 +1,4 @@
-package org.xmongodbprofiler;
+package org.dedunumax.xmongodbprofiler;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

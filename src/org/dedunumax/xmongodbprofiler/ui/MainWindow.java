@@ -1,4 +1,4 @@
-package org.xmongodbprofiler.ui;
+package org.dedunumax.xmongodbprofiler.ui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

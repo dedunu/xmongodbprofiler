@@ -23,7 +23,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>org.xmongodbprofiler.Main</mainClass>
+							<mainClass>org.dedunumax.xmongodbprofiler.Main</mainClass>
 							<classpathPrefix>libs/</classpathPrefix>
 						</manifest>
 					</archive>
