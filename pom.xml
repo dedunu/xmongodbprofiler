@@ -6,7 +6,7 @@
 
 	<groupId>org.dedunumax</groupId>
 	<artifactId>xmongodbprofiler</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>xmongodbprofiler</name>
 	<url>http://maven.apache.org</url>
 	<packaging>jar</packaging>
