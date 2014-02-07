@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.swing.JButton;
-import javax.swing.JInternalFrame;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -22,7 +22,7 @@ import org.dedunumax.xmongodbprofiler.database.Profiler;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 
-public class ProfilerWindow extends JInternalFrame implements ActionListener {
+public class ProfilerWindow extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 5481142824468689746L;
 	
@@ -67,18 +67,18 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 		this.add(btnStop);
 		
 		lblServer.setBounds(10, 15, 100, 10);
-		lblPort.setBounds(365, 15, 80, 10);
+		lblPort.setBounds(515, 15, 80, 10);
 		lblDatabase.setBounds(10, 45, 80, 10);
 		lblUserName.setBounds(10, 75, 100, 10);
 		lblPassword.setBounds(10, 105, 80, 10);
 		lblPath.setBounds(10, 135, 80, 10);
 
-		txtServer.setBounds(120, 10, 230, 20);
-		txtPort.setBounds(400, 10, 80, 20);
-		txtDatabase.setBounds(120, 40, 360, 20);
-		txtUserName.setBounds(120, 70, 360, 20);
-		txtPassword.setBounds(120, 100, 360, 20);
-		txtPath.setBounds(120, 130, 360, 20);
+		txtServer.setBounds(120, 10, 380, 20);
+		txtPort.setBounds(550, 10, 80, 20);
+		txtDatabase.setBounds(120, 40, 510, 20);
+		txtUserName.setBounds(120, 70, 510, 20);
+		txtPassword.setBounds(120, 100, 510, 20);
+		txtPath.setBounds(120, 130, 510, 20);
 
 		Date date = new Date();
 		String timestamp = (new Timestamp(date.getTime())).toString()
@@ -89,15 +89,15 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 
 		btnStop.setEnabled(false);
 
-		btnStart.setBounds(310, 155, 80, 30);
-		btnStop.setBounds(400, 155, 80, 30);
+		btnStart.setBounds(460, 155, 80, 30);
+		btnStop.setBounds(550, 155, 80, 30);
 
 		btnStart.addActionListener(this);
 		btnStop.addActionListener(this);
 		
-		this.setClosable(true);
+		//this.setClosable(true);
 		this.setTitle("MongoDB Profiler");
-		this.setSize(500, 230);
+		this.setSize(650, 230);
 		//this.setVisible(true);
 		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
