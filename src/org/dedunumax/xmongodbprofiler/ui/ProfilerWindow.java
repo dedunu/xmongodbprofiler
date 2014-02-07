@@ -171,7 +171,7 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 		if (e.getSource() == btnStop) {
 			try {
 				List<BasicDBObject> obj = Profiler.stopProfiler(database);
-				DataHandler.saveData(txtPath.getText(), obj);
+				DataHandler.saveDataXLS(txtPath.getText(), obj);
 
 				Date date = new Date();
 				String timestamp = (new Timestamp(date.getTime())).toString()
