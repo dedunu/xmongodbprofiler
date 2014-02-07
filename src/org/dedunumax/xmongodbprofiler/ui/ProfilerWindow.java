@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
@@ -39,7 +40,7 @@ public class ProfilerWindow extends JFrame implements ActionListener {
 	private JTextField txtPort = new JTextField("27017");
 	private JTextField txtDatabase = new JTextField();
 	private JTextField txtUserName = new JTextField();
-	private JTextField txtPassword = new JTextField();
+	private JPasswordField txtPassword = new JPasswordField();
 	private JTextField txtPath = new JTextField();
 
 	private JButton btnStart = new JButton("Start");
@@ -79,7 +80,7 @@ public class ProfilerWindow extends JFrame implements ActionListener {
 		txtUserName.setBounds(120, 70, 510, 20);
 		txtPassword.setBounds(120, 100, 510, 20);
 		txtPath.setBounds(120, 130, 510, 20);
-
+		
 		Date date = new Date();
 		String timestamp = (new Timestamp(date.getTime())).toString()
 				.replace(" ", "").replace("-", "").replace(":", "")
@@ -127,7 +128,7 @@ public class ProfilerWindow extends JFrame implements ActionListener {
 			}
 			try {
 				connection.setDatabase(txtDatabase.getText());
-				connection.setPassword(txtPassword.getText());
+				connection.setPassword(new String(txtPassword.getPassword()));
 				connection.setUserName(txtUserName.getText());
 				connection.addServer(txtServer.getText(),
 						Integer.parseInt(txtPort.getText()));
