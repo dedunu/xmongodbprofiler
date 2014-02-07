@@ -102,8 +102,7 @@ public class ProfilerWindow extends JInternalFrame implements ActionListener {
 		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 	}
-
-	@Override
+	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnStart) {
 			if (txtDatabase.getText().equals("")) {

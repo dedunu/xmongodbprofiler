@@ -39,7 +39,6 @@ public class MainWindow extends JFrame implements ActionListener {
 		menuExit.addActionListener(this);
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == menuExit) {
 			System.exit(0);
