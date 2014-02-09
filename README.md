@@ -19,4 +19,6 @@ How to use XMongoDBProfiler?
 	5.	Click "Start" Button.
 	6.	Once you are done with workflow, click on "Stop" button to stop profiling.
 
+Download XMongoDBProfiler?
 
+Visit http://git.dedunu.info/xmongodbprofiler/ and download latest binary.
