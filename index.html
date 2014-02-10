@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>XPongoDBProfiler</title>
+    <title>XMongoDBProfiler</title>
   </head>
 
   <body>
@@ -28,27 +28,32 @@
       <div class="inner clearfix">
         <section id="main-content">
    
- <h3>  What is XMongoDBProfiler?</h3>
+          <h3>  What is XMongoDBProfiler?</h3>
 
-<p>Graphical User Interface (GUI) for MongoDB Profiler. XMongoDBProfiler is a easy tool to perform profiling and collect profiling results.</p>
+          <p>Graphical User Interface (GUI) for MongoDB Profiler. XMongoDBProfiler is a easy tool to perform profiling and collect profiling results.</p>
+          <p>You can save Profiling results to a Excel(*.xls) file with XMongoDBProfiler. No longer you need to struggle with MongoDB Shell. You can easily start a profiler and collect profiling results.</p>
 
-<p>You can save Profiling results to a Excel(*.xls) file with XMongoDBProfiler. No longer you need to struggle with MongoDB Shell. You can easily start a profiler and collect profiling results.</p>
+          <h3>Requirements:</h3>
+            <ul>
+            <li>Java Runtime Environment 1.5.0 or later (According to your operating system)</li>
+            <li>Nothing else!</li>
+            </ul>
+          
+          <h3>How to use XMongoDBProfiler?</h3>
+          <ol>
+            <li>Download XMongoDBProfiler.zip or XMongoDBProfiler.tar.gz and extract it.</li>
+            <li>  Type ./run.sh in your terminal if you have UNIX-like operating system. If you are on windows just double click on "xmongodbprofiler-1.0.0.jar"</li>
+            <li>  Enter your MongoDB Server information including port, username, password and database.</li>
+            <li>  Change profiling result file path if you want. (By default it goes to home folder)</li>
+            <li>  Click "Start" Button.</li>
+            <li>  Once you are done with workflow, click on "Stop" button to stop profiling.</li>
+          </ol>
+          
+          <h3>Found a bug?</h3>
+          <p>If you found a bug please report it from <a href="https://github.com/dedunumax/xmongodbprofiler/issues">here</a>.</p>
 
-<h3>Requirements:</h3>
-  <ul>
-  <li>Java Runtime Environment 1.5.0 or later (According to your operating system)</li>
-  <li>Nothing else!</li>
-
-<h3>How to use XMongoDBProfiler?</h3>
-<ol>
-  <li>Download XMongoDBProfiler.zip or XMongoDBProfiler.tar.gz and extract it.</li>
-  <li>  Type ./run.sh in your terminal if you have UNIX-like operating system. If you are on windows just double click on "xmongodbprofiler-1.0.0.jar"</li>
-  <li>  Enter your MongoDB Server information including port, username, password and database.</li>
-  <li>  Change profiling result file path if you want. (By default it goes to home folder)</li>
-  <li>  Click "Start" Button.</li>
-  <li>  Once you are done with workflow, click on "Stop" button to stop profiling.</li>
-
-</ol>
+          <h3>Want to contribute?</h3>
+          <p>You can fork <a href="https://github.com/dedunumax/xmongodbprofiler/">GitHub repo</a> and make a pull request!</p>
         </section>
 
         <aside id="sidebar">
