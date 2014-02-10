@@ -21,4 +21,4 @@ How to use XMongoDBProfiler?
 
 Download XMongoDBProfiler?
 
-Visit http://git.dedunu.info/xmongodbprofiler/ and download latest binary.
+Visit http://web.dedunu.info/xmongodbprofiler/ and download latest binary.
