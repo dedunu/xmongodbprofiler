@@ -2,37 +2,101 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+      
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <style>
+      .container,
+      .container-fluid {
+           width: 940px;
+         }
+
+      #footer {
+        background-color: #f5f5f5;
+      }
+      
+      .credit {
+        margin: 20px 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      #wrap {
+        height: 100%;
+        margin: 0 auto -60px;
+        padding: 0 0 0px;
+      }
+
+      #footer {
+        height: 60px;
+        background-color: #f5f5f5;
+      }
+      </style>
 
     <title>XMongoDBProfiler</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>XMongoDBProfiler</h1>
-        <a href="https://github.com/dedunumax/xmongodbprofiler" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-   
-          <h3>  What is XMongoDBProfiler?</h3>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://web.dedunu.info/">Dedunu</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href='http://web.dedunu.info/' rel='tooltip'>Home</a></li>
+        <li><a href='http://www.dedunu.info/'>Blog</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find me on<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href='https://github.com/dedunumax'>GitHub</a></li>
+            <li><a href='http://lk.linkedin.com/in/dedunumax'>LinkedIn</a></li>
+            <li><a href='http://facebook.com/dedunu'>Facebook</a></li>
+            <li><a href='http://twitter.com/dedunumax'>Twitter</a></li>
+            <li><a href='https://plus.google.com/u/1/108741398003370872195'>Google+</a></li>
+          </ul>
+        </li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+        <li><a href='http://web.dedunu.info/contact/'>Contact</a></li>  
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class='container' id='container'> 
+<h1>XMongoDBProfiler</h1>
+ <h3>What is XMongoDBProfiler?</h3>
 
           <p>Graphical User Interface (GUI) for MongoDB Profiler. XMongoDBProfiler is a easy tool to perform profiling and collect profiling results.</p>
           <p>You can save Profiling results to a Excel(*.xls) file with XMongoDBProfiler. No longer you need to struggle with MongoDB Shell. You can easily start a profiler and collect profiling results.</p>
 
+<h3>Get XMongoDBProfiler!</h3>
+<a href="https://github.com/dedunumax/xmongodbprofiler/releases/download/v1.0/XMongoDBProfiler.zip" class="btn btn-primary btn-lg" role="button"><small>Download</small>
+            .zip file</a>
+<a href="https://github.com/dedunumax/xmongodbprofiler/releases/download/v1.0/XMongoDBProfiler.tar.gz" class="btn btn-primary btn-lg" role="button"><small>Download</small>
+            .tar.gz file</a></a>
           <h3>Requirements:</h3>
             <ul>
             <li>Java Runtime Environment 1.5.0 or later (According to your operating system)</li>
@@ -54,25 +118,8 @@
 
           <h3>Want to contribute?</h3>
           <p>You can fork <a href="https://github.com/dedunumax/xmongodbprofiler/">GitHub repo</a> and make a pull request!</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/dedunumax/xmongodbprofiler/releases/download/v1.0/XMongoDBProfiler.zip" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/dedunumax/xmongodbprofiler/releases/download/v1.0/XMongoDBProfiler.tar.gz" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/dedunumax/xmongodbprofiler"></a> is maintained by <a href="https://github.com/dedunumax">dedunumax</a>.</p>
-
-          <p><a href="http://web.dedunu.info">web.dedunu.info</a> is hosted with ❤ by <a href="http://www.github.com">GitHub</a>.</p>
-        </aside>
-      </div>
-    </div>
-
   
-  </body>
+
+</div>
+</body>
 </html>
