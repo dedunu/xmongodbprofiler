@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Built-By: dedunu
-Build-Jdk: 1.7.0_45
-Class-Path: libs/mongo-java-driver-2.11.3.jar libs/poi-3.9.jar libs/co
- mmons-codec-1.5.jar
-Main-Class: org.dedunumax.xmongodbprofiler.Main
-Created-By: Maven Integration for Eclipse
-
